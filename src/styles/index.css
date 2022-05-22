@@ -1,3 +1,15 @@
 @import './fonts.css';
 @import './theme.css';
 @import './utilities.css';
+
+body {
+	font-family: var(--ff-sans);
+}
+
+.reveal ul {
+	margin-left: 0;
+}
+
+.reveal li {
+	list-style: none;
+}

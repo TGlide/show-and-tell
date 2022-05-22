@@ -6,3 +6,27 @@
 	display: grid;
 	place-items: center;
 }
+
+.flex {
+	display: flex;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.color-red {
+	color: var(--red);
+}
+
+.color-green {
+	color: var(--green);
+}

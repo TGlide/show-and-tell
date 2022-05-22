@@ -273,10 +273,6 @@
 
 	/** Layered Animation **/
 
-	.color-red {
-		color: #f64e4d;
-	}
-
 	.layered-animations {
 		position: absolute;
 		top: 50%;

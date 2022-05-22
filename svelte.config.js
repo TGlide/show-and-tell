@@ -6,12 +6,26 @@ import FullReload from 'vite-plugin-full-reload';
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess(),
+	preprocess: [
+		preprocess({
+			scss: {
+				prependData: '@use "src/variables.scss" as *;'
+			}
+		})
+	],
 
 	kit: {
 		adapter: adapter(),
 		vite: {
-			plugins: [FullReload(['src/**/*'])]
+			plugins: [FullReload(['src/**/*'])],
+
+			css: {
+				preprocessorOptions: {
+					scss: {
+						additionalData: '@use "src/variables.scss" as *;'
+					}
+				}
+			}
 		}
 	}
 };

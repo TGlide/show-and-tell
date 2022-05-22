@@ -3,12 +3,11 @@
 	--ff-sans: 'Sohne', sans-serif;
 
 	/* Colors */
+	--red: #f64e4d;
+	--green: #10ac84;
 
 	/* Overriding Reveal theme */
 	--r-main-font: var(--ff-sans);
 	--r-main-font-size: 5rem;
-}
-
-body {
-	font-family: var(--ff-sans);
+	--r-heading-text-transform: unset;
 }

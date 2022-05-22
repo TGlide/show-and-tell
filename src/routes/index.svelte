@@ -4,8 +4,9 @@
 
 	onMount(async () => {
 		const { default: Reveal } = await import('reveal.js');
+		const { default: Notes } = await import('reveal.js/plugin/notes/notes.esm.js');
 
-		Reveal.initialize({ disableLayout: true });
+		Reveal.initialize({ disableLayout: true, plugins: [Notes] });
 	});
 </script>
 
@@ -13,5 +14,6 @@
 	<div class="slides">
 		<Slides.Introduction />
 		<Slides.AnimationsVsTransitions />
+		<Slides.Comparison />
 	</div>
 </div>

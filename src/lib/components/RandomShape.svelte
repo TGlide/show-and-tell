@@ -17,7 +17,6 @@
 		];
 
 		const gradient = randomPick(gradients);
-		console.log(gradient, typeof gradient);
 		return gradient;
 	}
 

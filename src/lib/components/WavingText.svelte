@@ -19,12 +19,13 @@
 			transform: translateY(0em);
 		}
 		10%,
-		50% {
+		30% {
 			transform: translateY(0.1em);
 		}
-		70% {
+		40% {
 			transform: translateY(-0.25em);
 		}
+		70%,
 		100% {
 			transform: translateY(0em);
 		}
