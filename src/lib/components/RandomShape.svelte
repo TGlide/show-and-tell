@@ -65,6 +65,6 @@
 	}
 
 	.shape--square {
-		border-radius: 8px;
+		border-radius: 20%;
 	}
 </style>

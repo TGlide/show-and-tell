@@ -11,7 +11,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		vite: {
-			plugins: [FullReload(['src/**/*.svelte'])]
+			plugins: [FullReload(['src/**/*'])]
 		}
 	}
 };

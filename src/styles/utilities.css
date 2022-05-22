@@ -1,0 +1,8 @@
+.section-wrapper {
+	height: 100vh;
+}
+
+.section-wrapper.center {
+	display: grid;
+	place-items: center;
+}
