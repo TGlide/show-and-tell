@@ -8,7 +8,7 @@
 	onMount(async () => {
 		const { default: Reveal } = await import('reveal.js');
 
-		Reveal.initialize();
+		Reveal.initialize({ disableLayout: true });
 
 		const randomSvgs = () => {
 			anime({
@@ -31,9 +31,6 @@
 <div class="reveal">
 	<div class="slides">
 		<section>
-			<p>
-				Demystifying <WavingText text="Animations" />
-			</p>
 			<div class="shapes">
 				{#each range(0, 50) as _}
 					<div class="shape-wrapper">
@@ -41,14 +38,24 @@
 					</div>
 				{/each}
 			</div>
+			<div class="wrapper">
+				<p>
+					Demystifying <WavingText text="Animations" />
+				</p>
+			</div>
 		</section>
-		<section>Slide 2</section>
+		<section>
+			<div class="wrapper">Slide 2</div>
+		</section>
 	</div>
 </div>
 
 <style>
-	section:nth-child(1) {
-		position: relative;
+	section .wrapper {
+		height: 100vh;
+
+		display: grid;
+		place-items: center;
 	}
 
 	section:nth-child(1) p {
@@ -64,6 +71,6 @@
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		transform: scale(0);
+		transform: translate(-50%, -50%) scale(0);
 	}
 </style>
