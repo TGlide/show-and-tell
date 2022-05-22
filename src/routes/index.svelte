@@ -1,18 +1,23 @@
 <script lang="ts">
-	import { browser } from '$app/env';
 	import RandomShape from '$lib/components/RandomShape.svelte';
 	import WavingText from '$lib/components/WavingText.svelte';
 	import { range } from '$lib/utils/array';
+	import anime from 'animejs';
+	import { onMount } from 'svelte';
 
-	const init = async () => {
-		if (browser) {
-			const { default: Reveal } = await import('reveal.js');
+	onMount(async () => {
+		const { default: Reveal } = await import('reveal.js');
 
-			Reveal.initialize();
-		}
-	};
+		Reveal.initialize();
 
-	init();
+		anime({
+			targets: '.shape-wrapper',
+			scale: [0, 1],
+			translateX: () => anime.random(-200, 200),
+			translateY: () => anime.random(-200, 200),
+			rotate: () => anime.random(-360, 360)
+		});
+	});
 </script>
 
 <div class="reveal">
@@ -21,10 +26,13 @@
 			<p>
 				Demystifying <WavingText text="Animations" />
 			</p>
-			{#each range(0, 5) as i}
-				<RandomShape />
-			{/each}
-			<RandomShape />
+			<div class="shapes">
+				{#each range(0, 10) as _}
+					<div class="shape-wrapper">
+						<RandomShape />
+					</div>
+				{/each}
+			</div>
 		</section>
 		<section>Slide 2</section>
 	</div>
@@ -33,5 +41,21 @@
 <style>
 	section:nth-child(1) {
 		position: relative;
+	}
+
+	section:nth-child(1) p {
+		position: relative;
+		z-index: 1;
+	}
+
+	section:nth-child(1) .shapes {
+		opacity: 0.5;
+	}
+
+	section:nth-child(1) .shape-wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: scale(0);
 	}
 </style>

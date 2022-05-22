@@ -34,11 +34,6 @@
 		return shape;
 	}
 
-	function getRandomRotation() {
-		const deg = Math.floor(Math.random() * 360);
-		return `${deg}deg`;
-	}
-
 	const randomShape = getRandomShape();
 
 	const shape = cva('shape', {
@@ -55,7 +50,6 @@
 	class={shape({ shape: randomShape })}
 	style:--bg={getRandomGradient()}
 	style:--size={getRandomSize()}
-	style:--rotation={getRandomRotation()}
 />
 
 <style>
@@ -63,8 +57,7 @@
 		background: var(--bg);
 		width: var(--size);
 		height: var(--size);
-		transform: rotate(var(--rotation));
-		opacity: 0.25;
+		opacity: 1;
 	}
 
 	.shape--circle {
