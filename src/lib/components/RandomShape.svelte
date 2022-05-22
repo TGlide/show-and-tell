@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { randomPick } from '$lib/utils/array';
 	import { cva } from 'class-variance-authority';
 
 	enum Shape {
@@ -6,20 +7,17 @@
 		SQUARE = 'square'
 	}
 
-	function getRandomHex() {
-		let hexCode = '';
-		const hexValues = '0123456789abcdef';
-
-		for (let i = 0; i < 6; i++) {
-			hexCode += hexValues.charAt(Math.floor(Math.random() * hexValues.length));
-		}
-		return hexCode;
-	}
-
 	function getRandomGradient() {
-		const deg = Math.floor(Math.random() * 360);
+		const gradients = [
+			'linear-gradient(to right,#3147bf,#33a2e9)',
+			'linear-gradient(to right,#7820d0,#2ac5fa)',
+			'linear-gradient(to right,#fcb713,#ed7176)',
+			'linear-gradient(to right, #ee5253, #ff6b6b)',
+			'linear-gradient(to right,#3fcdc4,#65f5b5)'
+		];
 
-		const gradient = `linear-gradient(${deg}deg, #${getRandomHex()}, #${getRandomHex()})`;
+		const gradient = randomPick(gradients);
+		console.log(gradient, typeof gradient);
 		return gradient;
 	}
 

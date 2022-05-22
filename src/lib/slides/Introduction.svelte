@@ -5,18 +5,19 @@
 	import anime from 'animejs';
 	import { onMount } from 'svelte';
 
+	const translateRange = 2000;
+
 	onMount(() => {
 		const randomSvgs = () => {
 			anime({
 				targets: '.shape-wrapper',
-				delay: anime.stagger(10, { start: 1000 }),
+				delay: anime.stagger(50, { start: 1000 }),
 				duration: 5000,
 				direction: 'alternate',
 				complete: randomSvgs,
 				scale: [0, 1],
-				opacity: [0, 1],
-				translateX: () => anime.random(-1000, 1000),
-				translateY: () => anime.random(-1000, 1000),
+				translateX: () => anime.random(-translateRange, translateRange),
+				translateY: () => anime.random(-translateRange, translateRange),
 				rotate: () => anime.random(-360, 360)
 			});
 		};
@@ -26,7 +27,7 @@
 
 <section>
 	<div class="shapes">
-		{#each range(0, 50) as _}
+		{#each range(0, 200) as _}
 			<div class="shape-wrapper">
 				<RandomShape />
 			</div>

@@ -267,6 +267,7 @@
 	}
 
 	section.transitions .box-wrapper .box:hover {
+		cursor: pointer;
 		transform: scale(1.2) rotate(15deg);
 	}
 
