@@ -153,6 +153,11 @@
   resolved "https://registry.yarnpkg.com/@types/pug/-/pug-2.0.6.tgz#f830323c88172e66826d0bde413498b61054b5a6"
   integrity sha512-SnHmG9wN1UVmagJOnyo/qkk0Z7gejYxOYYmaAwr5u2yFYfsupN3sg10kyzN8Hep/2zbHxCnsumxOoRIRMBwKCg==
 
+"@types/reveal@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@types/reveal/-/reveal-4.2.0.tgz#03695a7785fbb0c1050bae85930229bb17effabc"
+  integrity sha512-lhTCUrk8pU/9SWcqbLwCy/AFjCp9S2hcDGoKAIycWGcHujUrDKMXWVkOvbSWk/gohZwwfuxQxucBaqvYAM5DTQ==
+
 "@types/sass@^1.16.0":
   version "1.43.1"
   resolved "https://registry.yarnpkg.com/@types/sass/-/sass-1.43.1.tgz#86bb0168e9e881d7dade6eba16c9ed6d25dc2f68"
@@ -1367,6 +1372,14 @@ v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
+
+vite-plugin-full-reload@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-full-reload/-/vite-plugin-full-reload-1.0.0.tgz#230b6b61e7ff4fc66bfe7e24d0dfe9ad2b6d750d"
+  integrity sha512-GUhQ4wSm+H6yAlz7d2JwLu+BEcsFqZu1SUH0CNG+uyP4ALXGofUjHi+eGdLX19bYhMuOUWW3EwMt68jFkBsMew==
+  dependencies:
+    picocolors "^1.0.0"
+    picomatch "^2.3.1"
 
 vite@^2.9.9:
   version "2.9.9"

@@ -1,0 +1,9 @@
+:root {
+	/* Typography */
+	--ff-sans: 'Sohne', sans-serif;
+
+	/* Colors */
+
+	/* Overriding Reveal theme */
+	--r-main-font: var(--ff-sans);
+}
