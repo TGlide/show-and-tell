@@ -10,13 +10,21 @@
 
 		Reveal.initialize();
 
-		anime({
-			targets: '.shape-wrapper',
-			scale: [0, 1],
-			translateX: () => anime.random(-200, 200),
-			translateY: () => anime.random(-200, 200),
-			rotate: () => anime.random(-360, 360)
-		});
+		const randomSvgs = () => {
+			anime({
+				targets: '.shape-wrapper',
+				delay: anime.stagger(10, { start: 1000 }),
+				duration: 5000,
+				direction: 'alternate',
+				complete: randomSvgs,
+				scale: [0, 1],
+				opacity: [0, 1],
+				translateX: () => anime.random(-1000, 1000),
+				translateY: () => anime.random(-1000, 1000),
+				rotate: () => anime.random(-360, 360)
+			});
+		};
+		randomSvgs();
 	});
 </script>
 
@@ -27,7 +35,7 @@
 				Demystifying <WavingText text="Animations" />
 			</p>
 			<div class="shapes">
-				{#each range(0, 10) as _}
+				{#each range(0, 50) as _}
 					<div class="shape-wrapper">
 						<RandomShape />
 					</div>
@@ -49,7 +57,7 @@
 	}
 
 	section:nth-child(1) .shapes {
-		opacity: 0.5;
+		opacity: 0.25;
 	}
 
 	section:nth-child(1) .shape-wrapper {
