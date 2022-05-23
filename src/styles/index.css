@@ -1,13 +1,15 @@
+@import './reset.css';
 @import './fonts.css';
 @import './theme.css';
 @import './utilities.css';
+@import './components.css';
 
 body {
 	font-family: var(--ff-sans);
 }
 
 .reveal ul {
-	margin-left: 0;
+	margin-left: 2.5rem;
 }
 
 .reveal li {

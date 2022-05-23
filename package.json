@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@lottiefiles/lottie-player": "^1.5.7",
 		"@types/reveal": "^4.2.0",
 		"animejs": "^3.2.1",
 		"class-variance-authority": "^0.2.1",
