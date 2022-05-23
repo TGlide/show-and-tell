@@ -1,6 +1,8 @@
 <script lang="ts">
 	export let text: string;
 
+	$: mappedText = text.split('').map((char) => (char === ' ' ? '&nbsp;' : char));
+
 	const getDelay = (idx: number) => {
 		const delay = idx * 35;
 		return `${delay}ms`;
@@ -8,8 +10,8 @@
 </script>
 
 <p class="flipped">
-	{#each text as char, idx}
-		<span style:--delay={getDelay(idx)}>{char}</span>
+	{#each mappedText as char, idx}
+		<span style:--delay={getDelay(idx)}>{@html char}</span>
 	{/each}
 </p>
 

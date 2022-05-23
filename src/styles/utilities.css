@@ -1,3 +1,4 @@
+/* Reveal */
 .section-wrapper {
 	height: 100vh;
 }
@@ -7,6 +8,7 @@
 	place-items: center;
 }
 
+/* Layout */
 .flex {
 	display: flex;
 }
@@ -31,10 +33,45 @@
 	align-items: center;
 }
 
+/* Colors */
 .color-red {
 	color: var(--red);
 }
 
 .color-green {
 	color: var(--green);
+}
+
+/* Typography */
+.fs-1 {
+	font-size: 1rem;
+}
+
+.fs-2 {
+	font-size: 2rem;
+}
+
+.fs-3 {
+	font-size: 3rem;
+}
+
+.fs-4 {
+	font-size: 4rem;
+}
+
+.fs-5 {
+	font-size: 5rem;
+}
+
+/* Spaces */
+.mt-4 {
+	margin-top: 0.25rem;
+}
+
+.mt-8 {
+	margin-top: 0.5rem;
+}
+
+.mt-16 {
+	margin-top: 1rem;
 }

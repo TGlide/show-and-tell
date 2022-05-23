@@ -15,3 +15,7 @@ body {
 .reveal li {
 	list-style: none;
 }
+
+a {
+	cursor: pointer;
+}

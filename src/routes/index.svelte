@@ -15,5 +15,7 @@
 		<Slides.Introduction />
 		<Slides.AnimationsVsTransitions />
 		<Slides.Comparison />
+		<Slides.RightToolForTheJob />
+		<Slides.End />
 	</div>
 </div>

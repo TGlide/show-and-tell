@@ -117,6 +117,7 @@
 					{/key}
 				</div>
 				<button class="button" on:click={toggleSpeed}>Speed {speed}x</button>
+				<a class="fs-1 mt-16" href="dia.mp4" target="_blank">Dia example</a>
 			</div>
 		</div>
 	</section>
