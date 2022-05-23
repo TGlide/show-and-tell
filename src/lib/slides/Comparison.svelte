@@ -170,7 +170,7 @@
 					</li>
 				</ul>
 			</div>
-			<div>
+			<div class="flex justify-center">
 				<StaggeredAnimation />
 			</div>
 		</div>
@@ -187,7 +187,7 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		gap: 1rem;
+		gap: 2rem;
 		padding: 0 5rem;
 
 		font-size: 2rem;
