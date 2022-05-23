@@ -1,4 +1,5 @@
 <script lang="ts">
+	import StaggeredAnimation from '$lib/components/StaggeredAnimation.svelte';
 	import WavingText from '$lib/components/WavingText.svelte';
 	import Icon from '$lib/UI/Icon.svelte';
 	import { onMount } from 'svelte';
@@ -170,11 +171,7 @@
 				</ul>
 			</div>
 			<div>
-				<iframe
-					src="https://yonder-web.vercel.app/"
-					title="Video example: Proxyrack"
-					frameborder="0"
-				/>
+				<StaggeredAnimation />
 			</div>
 		</div>
 	</section>
