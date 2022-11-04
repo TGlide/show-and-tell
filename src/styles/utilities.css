@@ -63,6 +63,29 @@
 	font-size: 5rem;
 }
 
+@media (min-width: 768px) {
+	.lg-fs-1 {
+		font-size: 1rem;
+	}
+
+	.lg-fs-2 {
+		font-size: 2rem;
+	}
+
+	.lg-fs-3 {
+		font-size: 3rem;
+	}
+
+	.lg-fs-4 {
+		font-size: 4rem;
+	}
+
+	.lg-fs-5 {
+		font-size: 5rem;
+	}
+
+}
+
 /* Spaces */
 .mt-4 {
 	margin-top: 0.25rem;

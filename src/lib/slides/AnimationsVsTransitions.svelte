@@ -131,7 +131,7 @@
 
 <section>
 	<section class="animations">
-		<p>Animations</p>
+		<p class="fs-3 lg-fs-4">Animations</p>
 		<div class="animation-wrapper">
 			<div class="layered-animations">
 				<svg class="large shape" viewBox="0 0 96 96">
@@ -215,7 +215,7 @@
 	</section>
 	<section class="transitions">
 		<div class="section-wrapper">
-			<p>Transitions</p>
+			<p class="fs-3 lg-fs-4">Transitions</p>
 			<div class="box-wrapper">
 				<div class="box">Hover me!</div>
 			</div>
@@ -231,6 +231,10 @@
 		position: absolute;
 		width: 100%;
 		height: 100vh;
+	}
+
+	section.animations > p {
+		font-size: 3rem;
 	}
 
 	.animation-wrapper {
@@ -256,17 +260,18 @@
 
 		background: linear-gradient(180deg, #373734, #242423, #0d0d0c);
 		border-radius: 10%;
-		font-size: 2rem;
+		font-size: clamp(1rem, 5vw, 2rem);
 		font-weight: 500;
 
-		--size: 30rem;
+		--size: clamp(160px, 20vw, 320px);
 		width: var(--size);
 		height: var(--size);
 
 		transition: all 0.3s ease;
 	}
 
-	section.transitions .box-wrapper .box:hover {
+	section.transitions .box-wrapper .box:hover,
+	section.transitions .box-wrapper .box:active {
 		cursor: pointer;
 		transform: scale(1.2) rotate(15deg);
 	}

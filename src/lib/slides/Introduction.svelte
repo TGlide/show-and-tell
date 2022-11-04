@@ -35,7 +35,7 @@
 	</div>
 
 	<div class="section-wrapper center">
-		<p>
+		<p class="fs-3 lg-fs-4">
 			Demystifying <WavingText text="Animations" />
 		</p>
 	</div>

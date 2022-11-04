@@ -4,7 +4,7 @@
 	import anime from 'animejs';
 	import { onMount } from 'svelte';
 
-	let grid = [10, 10];
+	let grid = [8, 8];
 	let cell = 39;
 	let numberOfElements = grid[0] * grid[1];
 

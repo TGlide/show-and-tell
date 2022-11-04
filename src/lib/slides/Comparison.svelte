@@ -20,7 +20,7 @@
 <section>
 	<section>
 		<div class="section-wrapper center">
-			<p class="title">Comparing animation <WavingText text="implementations" /></p>
+			<p class="title fs-2 lg-fs-4">Comparing animation <WavingText text="implementations" /></p>
 		</div>
 	</section>
 	<section>
@@ -186,12 +186,23 @@
 
 	.side-by-side {
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		gap: 2rem;
-		padding: 0 5rem;
+		flex-direction: column;
+		gap: 1rem;
 
-		font-size: 2rem;
+		padding: 0 1rem;
+
+		font-size: 1rem;
+		overflow-y: scroll;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			gap: 2rem;
+			font-size: 2rem;
+
+			padding: 0 5rem;
+		}
 
 		> * {
 			width: 100%;
@@ -203,7 +214,11 @@
 			align-items: flex-start;
 
 			h1 {
-				text-align: start;
+				text-align: center;
+
+				@media (min-width: 768px) {
+					text-align: start;
+				}
 			}
 
 			li {
@@ -227,7 +242,7 @@
 	}
 
 	.lottie-wrapper {
-		width: 800px;
-		height: 800px;
+		width: clamp(300px, 50vw, 800px);
+		height: clamp(300px, 50vw, 800px);
 	}
 </style>

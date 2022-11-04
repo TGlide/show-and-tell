@@ -310,22 +310,63 @@
 	export let variant: IconVariant;
 	export let size: Size = 'base';
 
-	const width = sizeMap[size];
-	const height = sizeMap[size];
-
 	$: href = `${featherSprite}#${variant}`;
 </script>
 
-<svg style:width style:height {...$$restProps}>
+<svg class={size} {...$$restProps}>
 	<use {href} />
 </svg>
 
-<style>
+<style lang="scss">
 	svg {
 		stroke: var(--color, currentColor);
 		stroke-width: 2;
 		stroke-linecap: round;
 		stroke-linejoin: round;
 		fill: none;
+		width: var(--size);
+		height: var(--size);
+	}
+
+	.sm {
+		--size: 0.5rem;
+	}
+
+	.base {
+		--size: 0.75rem;
+	}
+
+	.md {
+		--size: 1rem;
+	}
+
+	.lg {
+		--size: 1.25rem;
+	}
+
+	.xl {
+		--size: 1.5rem;
+	}
+
+	@media (min-width: 768px) {
+		.sm {
+			--size: 0.75rem;
+		}
+
+		.base {
+			--size: 1rem;
+		}
+
+		.md {
+			--size: 1.25rem;
+		}
+
+		.lg {
+			--size: 1.5rem;
+		}
+
+		.xl {
+			--size: 2.25rem;
+		}
 	}
 </style>
