@@ -13,4 +13,10 @@
 	main {
 		height: 100vh;
 	}
+
+	@media (max-width: 767px) {
+		:global(.reveal .controls) {
+			bottom: 64px !important;
+		}
+	}
 </style>
